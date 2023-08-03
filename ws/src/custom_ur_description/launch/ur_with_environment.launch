@@ -1,0 +1,10 @@
+<launch>
+
+    <arg name="ur_type" default="ur3e" description="Type/series of used UR robot. Valid choices are: ['ur3', 'ur3e', 'ur5', 'ur5e', 'ur10', 'ur10e']"/>
+
+    <include file="$(find-pkg-share ur_description)/launch/view_ur.launch.py">
+        <arg name="ur_type" value="$(var ur_type)"/>
+        <arg name="description_package" value="custom_ur_description"/>
+        <arg name="description_file" value="ur_with_environment.xacro"/>
+    </include>
+</launch>

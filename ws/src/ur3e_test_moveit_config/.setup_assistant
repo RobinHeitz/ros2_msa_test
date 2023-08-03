@@ -1,0 +1,26 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: custom_ur_description
+    relative_path: urdf/ur_with_environment.xacro
+    xacro_args: name:=ur ur_type:=ur3e
+  srdf:
+    relative_path: config/ur.srdf
+  package_settings:
+    author_name: ""
+    author_email: ""
+    generated_timestamp: 1691048898
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
